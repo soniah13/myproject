@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} School system {% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Students & Their Courses</h1>
+    <ul class="list-group">
+        {% for student in students %}
+            <li class="list-group-item">
+                <strong>{{ student.name }}</strong> ({{ student.email }})<br>
+                
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

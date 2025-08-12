@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+{% comment %} {{ form.as_p }} {% endcomment %}
+
+<div>
+    <label>Name</label>
+    {{ form.name}}
+</div>
+<div>
+    <label>Description</label>
+    {{ form.description}}
+</div>
+<div>
+    <label>Image</label>
+    {{ form.pet_image}}
+</div>
+<button type="submit"> save</button>
+</form>
+{% endblock %}
